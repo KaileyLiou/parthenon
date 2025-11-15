@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 [gd_scene load_steps=2 format=3 uid="uid://6dj4q0sqd4ug"]
 
 [ext_resource type="Texture2D" uid="uid://cglrbahjs5d02" path="res://pigeon.png" id="1_8mrap"]
+=======
+[gd_scene load_steps=0 format=3 uid="uid://6dj4q0sqd4ug"]
+>>>>>>> b745b560fe35148af161e995de6496f2adf3bdf2
 
 [node name="Node" type="Node"]
 
