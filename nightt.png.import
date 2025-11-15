@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bloo2n6wxa8tm"
-path="res://.godot/imported/portal.png-cac28fad10330d5df5782c260ec8497f.ctex"
+uid="uid://dard6say52yix"
+path="res://.godot/imported/nightt.png-21e07ac3ff594703c45d5b345d3eaace.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://portal.png"
-dest_files=["res://.godot/imported/portal.png-cac28fad10330d5df5782c260ec8497f.ctex"]
+source_file="res://nightt.png"
+dest_files=["res://.godot/imported/nightt.png-21e07ac3ff594703c45d5b345d3eaace.ctex"]
 
 [params]
 
