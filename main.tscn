@@ -1,3 +1,10 @@
-[gd_scene load_steps=0 format=3 uid="uid://4l45mxjyvd3i"]
+[gd_scene load_steps=2 format=3 uid="uid://4l45mxjyvd3i"]
+
+[ext_resource type="Texture2D" uid="uid://cglrbahjs5d02" path="res://pigeon.png" id="1_ig7tw"]
 
 [node name="Node" type="Node"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_ig7tw")
