@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://duero0uo61kay"]
+
+[ext_resource type="Script" uid="uid://dq4nk4iy8dqeb" path="res://cookie_ui.gd" id="1_ufrkt"]
+[ext_resource type="Texture2D" uid="uid://cchysbdd3237q" path="res://cookie.png" id="2_4viwo"]
+
+[node name="CookieUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ufrkt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 61.0
+offset_right = 766.0
+offset_bottom = 761.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_4viwo")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 89.0
+offset_right = 411.0
+offset_bottom = 226.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 100
+text = "0"
+horizontal_alignment = 1

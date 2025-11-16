@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cghjbfckxb3w2"]
+
+[ext_resource type="Script" uid="uid://psqo1nboctec" path="res://cookie.gd" id="1_0fkkf"]
+
+[node name="Cookie" type="Node2D"]
+script = ExtResource("1_0fkkf")
+value = null
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
