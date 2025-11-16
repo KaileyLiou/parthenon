@@ -8,3 +8,4 @@ func _ready():
 	
 func on_event_cookie_collected(value: int) -> void:
 	label.text = str(value)
+	

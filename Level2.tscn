@@ -1,14 +1,14 @@
-[gd_scene load_steps=14 format=4 uid="uid://tkg37lywfyht"]
+[gd_scene load_steps=14 format=4 uid="uid://6dj4q0sqd4ug"]
 
 [ext_resource type="Texture2D" uid="uid://cglrbahjs5d02" path="res://pigeon.png" id="1_8mrap"]
 [ext_resource type="Texture2D" uid="uid://dard6say52yix" path="res://nightt.png" id="1_psxy2"]
 [ext_resource type="Texture2D" uid="uid://d3shq1rsutgc5" path="res://whitetile.png" id="2_q04gf"]
 [ext_resource type="Script" uid="uid://dd0tmc1lnba0" path="res://character_body_2d.gd" id="2_s8dg4"]
-[ext_resource type="Script" path="res://resetbutton.gd" id="3_6faey"]
+[ext_resource type="Script" uid="uid://cvdn55mapivta" path="res://resetbutton.gd" id="3_6faey"]
 [ext_resource type="Script" uid="uid://gn8fgxyc63va" path="res://toEndScreen.gd" id="5_6faey"]
 [ext_resource type="Texture2D" uid="uid://csynqvl6q3tr" path="res://portal.png" id="5_wwdpc"]
-[ext_resource type="PackedScene" uid="uid://cghjbfckxb3w2" path="res://cookie.tscn" id="8_6x3wt"]
-[ext_resource type="PackedScene" uid="uid://duero0uo61kay" path="res://cookie_ui.tscn" id="9_3453u"]
+[ext_resource type="PackedScene" path="res://cookie.tscn" id="8_6x3wt"]
+[ext_resource type="PackedScene" uid="uid://dxanhbq6chxt1" path="res://cookie_ui.tscn" id="9_3453u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s8dg4"]
 texture = ExtResource("2_q04gf")
@@ -7272,6 +7272,12 @@ tile_set = SubResource("TileSet_ex07k")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="CookieUI" parent="CanvasLayer" instance=ExtResource("9_3453u")]
+offset_left = -9.0
+offset_top = 23.0
+offset_right = 31.0
+offset_bottom = 63.0
+
 [node name="Button" type="Button" parent="CanvasLayer"]
 anchors_preset = -1
 anchor_left = 0.85400003
@@ -7324,12 +7330,6 @@ position = Vector2(496, -51)
 
 [node name="Cookie2" parent="." instance=ExtResource("8_6x3wt")]
 position = Vector2(640, -237)
-
-[node name="CookieUI" parent="." instance=ExtResource("9_3453u")]
-offset_left = 225.0
-offset_top = 23.0
-offset_right = 265.0
-offset_bottom = 63.0
 
 [node name="Cookie3" parent="." instance=ExtResource("8_6x3wt")]
 position = Vector2(832, -85)

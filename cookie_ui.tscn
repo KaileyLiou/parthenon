@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://duero0uo61kay"]
+[gd_scene load_steps=3 format=3 uid="uid://dxanhbq6chxt1"]
 
 [ext_resource type="Script" uid="uid://dq4nk4iy8dqeb" path="res://cookie_ui.gd" id="1_ufrkt"]
 [ext_resource type="Texture2D" uid="uid://cchysbdd3237q" path="res://cookie.png" id="2_4viwo"]
