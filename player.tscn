@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
 size = Vector2(31, 42)
 
-[node name="Player" type="CharacterBody2D" groups=["player2"]]
+[node name="Player" type="CharacterBody2D" groups=["player", "player2"]]
 script = ExtResource("1_hqtel")
 
 [node name="Chomp" type="AudioStreamPlayer2D" parent="."]
