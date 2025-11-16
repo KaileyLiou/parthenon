@@ -1,13 +1,12 @@
-[gd_scene load_steps=14 format=4 uid="uid://6dj4q0sqd4ug"]
+[gd_scene load_steps=12 format=4 uid="uid://6dj4q0sqd4ug"]
 
-[ext_resource type="Texture2D" uid="uid://cglrbahjs5d02" path="res://pigeon.png" id="1_8mrap"]
 [ext_resource type="Texture2D" uid="uid://dard6say52yix" path="res://nightt.png" id="1_psxy2"]
 [ext_resource type="Texture2D" uid="uid://d3shq1rsutgc5" path="res://whitetile.png" id="2_q04gf"]
 [ext_resource type="Script" uid="uid://cvdn55mapivta" path="res://resetbutton.gd" id="3_6faey"]
 [ext_resource type="Script" uid="uid://gn8fgxyc63va" path="res://toEndScreen.gd" id="5_6faey"]
 [ext_resource type="Texture2D" uid="uid://csynqvl6q3tr" path="res://portal.png" id="5_wwdpc"]
-[ext_resource type="Script" uid="uid://d0jaj64r2ey5h" path="res://player.gd" id="7_6x3wt"]
 [ext_resource type="PackedScene" path="res://cookie.tscn" id="8_6x3wt"]
+[ext_resource type="PackedScene" uid="uid://2d0cnsxgk4ap" path="res://player.tscn" id="8_nc7oo"]
 [ext_resource type="PackedScene" uid="uid://dxanhbq6chxt1" path="res://cookie_ui.tscn" id="9_3453u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s8dg4"]
@@ -7220,9 +7219,6 @@ sources/0 = SubResource("TileSetAtlasSource_s8dg4")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nc7oo"]
 size = Vector2(159, 190)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mrap"]
-size = Vector2(29.75, 45.75)
-
 [node name="Node" type="Node"]
 
 [node name="Nightt5" type="Sprite2D" parent="."]
@@ -7305,61 +7301,56 @@ texture = ExtResource("5_wwdpc")
 position = Vector2(4, -16)
 shape = SubResource("RectangleShape2D_nc7oo")
 
-[node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
-position = Vector2(129, -300)
-script = ExtResource("7_6x3wt")
-
-[node name="Pigeon" type="Sprite2D" parent="Player"]
-position = Vector2(160, 153.00002)
-scale = Vector2(0.10283687, 0.11764705)
-texture = ExtResource("1_8mrap")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(132, 155)
-zoom = Vector2(2, 2)
-limit_bottom = 28
-position_smoothing_enabled = true
-position_smoothing_speed = 4.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(158, 153)
-shape = SubResource("RectangleShape2D_8mrap")
-
 [node name="Cookie" parent="." instance=ExtResource("8_6x3wt")]
 position = Vector2(496, -51)
+value = 1
 
 [node name="Cookie2" parent="." instance=ExtResource("8_6x3wt")]
 position = Vector2(640, -237)
+value = 1
 
 [node name="Cookie3" parent="." instance=ExtResource("8_6x3wt")]
 position = Vector2(832, -85)
+value = 1
 
 [node name="Cookie4" parent="." instance=ExtResource("8_6x3wt")]
 position = Vector2(1247, -111)
+value = 1
 
 [node name="Cookie5" parent="." instance=ExtResource("8_6x3wt")]
 position = Vector2(1466, -147)
+value = 1
 
 [node name="Cookie6" parent="." instance=ExtResource("8_6x3wt")]
 position = Vector2(1520, -24)
+value = 1
 
 [node name="Cookie7" parent="." instance=ExtResource("8_6x3wt")]
 position = Vector2(1623, -111)
+value = 1
 
 [node name="Cookie8" parent="." instance=ExtResource("8_6x3wt")]
 position = Vector2(1805, -182)
+value = 1
 
 [node name="Cookie9" parent="." instance=ExtResource("8_6x3wt")]
 position = Vector2(1997, -181)
+value = 1
 
 [node name="Cookie10" parent="." instance=ExtResource("8_6x3wt")]
 position = Vector2(2295, -185)
+value = 1
 
 [node name="Cookie11" parent="." instance=ExtResource("8_6x3wt")]
 position = Vector2(2357, -186)
+value = 1
 
 [node name="Cookie12" parent="." instance=ExtResource("8_6x3wt")]
 position = Vector2(2534, -21)
+value = 1
+
+[node name="Player" parent="." instance=ExtResource("8_nc7oo")]
+position = Vector2(65, 42)
 
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

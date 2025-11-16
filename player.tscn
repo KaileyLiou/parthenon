@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://2d0cnsxgk4ap"]
+
+[ext_resource type="Script" uid="uid://d0jaj64r2ey5h" path="res://player.gd" id="1_hqtel"]
+[ext_resource type="AudioStream" uid="uid://dyfch2vfuu4vt" path="res://sounds/chomp-155392.mp3" id="2_sweqy"]
+[ext_resource type="AudioStream" uid="uid://b7gh4ts4mgxml" path="res://sounds/cartoon-jump-6462.mp3" id="3_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://cglrbahjs5d02" path="res://pigeon.png" id="4_1jxqw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
+size = Vector2(31, 42)
+
+[node name="Player" type="CharacterBody2D" groups=["player2"]]
+script = ExtResource("1_hqtel")
+
+[node name="Chomp" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_sweqy")
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_2hs0m")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(21, -162)
+zoom = Vector2(2, 2)
+limit_bottom = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(21.305422, -163.25)
+scale = Vector2(0.107466035, 0.10746605)
+texture = ExtResource("4_1jxqw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21, -163)
+shape = SubResource("RectangleShape2D_ig7tw")

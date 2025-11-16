@@ -1,15 +1,12 @@
-[gd_scene load_steps=16 format=4 uid="uid://4l45mxjyvd3i"]
+[gd_scene load_steps=12 format=4 uid="uid://4l45mxjyvd3i"]
 
-[ext_resource type="Script" uid="uid://d0jaj64r2ey5h" path="res://player.gd" id="1_h2yge"]
-[ext_resource type="Texture2D" uid="uid://cglrbahjs5d02" path="res://pigeon.png" id="1_ig7tw"]
 [ext_resource type="PackedScene" path="res://cookie.tscn" id="1_kek77"]
 [ext_resource type="Texture2D" uid="uid://d3shq1rsutgc5" path="res://whitetile.png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://c5con12ecm52o" path="res://portal2.png" id="2_lquwl"]
 [ext_resource type="Script" uid="uid://cvdn55mapivta" path="res://resetbutton.gd" id="3_272bh"]
 [ext_resource type="Texture2D" uid="uid://bxj4lueticivt" path="res://morning.png" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://2d0cnsxgk4ap" path="res://player.tscn" id="5_5vw27"]
 [ext_resource type="Script" uid="uid://ch3nmlqa0b71f" path="res://area_2d.gd" id="5_7mycd"]
-[ext_resource type="AudioStream" uid="uid://dyfch2vfuu4vt" path="res://sounds/chomp-155392.mp3" id="6_efxa6"]
-[ext_resource type="AudioStream" uid="uid://b7gh4ts4mgxml" path="res://sounds/cartoon-jump-6462.mp3" id="7_dg77c"]
 [ext_resource type="PackedScene" uid="uid://dxanhbq6chxt1" path="res://cookie_ui.tscn" id="8_5vw27"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
@@ -7219,9 +7216,6 @@ texture = ExtResource("2_0xm2m")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_h2yge")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
-size = Vector2(31, 42)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
 size = Vector2(204.4389, 246.71973)
 
@@ -7297,31 +7291,8 @@ text = "Reset"
 script = ExtResource("3_272bh")
 metadata/_edit_group_ = true
 
-[node name="Player" type="CharacterBody2D" parent="." groups=["player2"]]
+[node name="Player" parent="." instance=ExtResource("5_5vw27")]
 position = Vector2(1, 0)
-script = ExtResource("1_h2yge")
-
-[node name="Chomp" type="AudioStreamPlayer2D" parent="Player"]
-stream = ExtResource("6_efxa6")
-
-[node name="Jump" type="AudioStreamPlayer2D" parent="Player"]
-stream = ExtResource("7_dg77c")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(21, -162)
-zoom = Vector2(2, 2)
-limit_bottom = 0
-position_smoothing_enabled = true
-position_smoothing_speed = 7.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(21.305422, -163.25)
-scale = Vector2(0.107466035, 0.10746605)
-texture = ExtResource("1_ig7tw")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(21, -163)
-shape = SubResource("RectangleShape2D_ig7tw")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("5_7mycd")
