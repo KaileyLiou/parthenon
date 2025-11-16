@@ -1,3 +1,10 @@
-[gd_scene load_steps=0 format=3 uid="uid://ce3wmjndstom3"]
+[gd_scene load_steps=2 format=3 uid="uid://ce3wmjndstom3"]
 
-[node name="Node" type="Node"]
+[ext_resource type="Texture2D" uid="uid://bl6kfgn7vceix" path="res://images/endslide.png" id="1_womtn"]
+
+[node name="End" type="Node"]
+
+[node name="Endslide" type="Sprite2D" parent="."]
+position = Vector2(578, 329)
+rotation = 0.0008117563
+texture = ExtResource("1_womtn")

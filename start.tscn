@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://68k0xfaueu06"]
+
+[ext_resource type="Texture2D" uid="uid://wjqd4pau7a6f" path="res://images/startslide.png" id="1_ots34"]
+[ext_resource type="Texture2D" uid="uid://cvp68vftkdai7" path="res://images/startButton.png" id="2_qn1rc"]
+[ext_resource type="Script" uid="uid://ohqwvncfxgt1" path="res://button.gd" id="3_1n0d2"]
+
+[node name="Start" type="Node"]
+
+[node name="Startslide" type="Sprite2D" parent="."]
+position = Vector2(580, 328)
+texture = ExtResource("1_ots34")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.69900006
+anchor_top = 0.808
+anchor_right = 0.96800005
+anchor_bottom = 1.0
+offset_left = -38.248047
+offset_top = -57.584045
+offset_right = 34.86389
+offset_bottom = 56.0
+icon = ExtResource("2_qn1rc")
+flat = true
+expand_icon = true
+script = ExtResource("3_1n0d2")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

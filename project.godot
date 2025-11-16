@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Parthenon"
-run/main_scene="uid://4l45mxjyvd3i"
+run/main_scene="uid://68k0xfaueu06"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 <<<<<<<HEADrun/main_scene="uid://4l45mxjyvd3i"
@@ -27,6 +27,7 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [global_group]
 
+player=""
 player2=""
 
 [input]
