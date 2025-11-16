@@ -15,4 +15,4 @@ Collect the cookies to earn energy and make it to the end of level 2! If the pig
 
 ## Play the Game
 
-Try out our game here: 
+Try out our game here: https://laurenchennet.itch.io/let-the-pigeon-drive-the-bus
