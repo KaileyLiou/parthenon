@@ -36,9 +36,9 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [global_group]
 
+player=""
 player2=""
 <<<<<<<HEADplayer2=""
-player=""
 
 [input]
 
