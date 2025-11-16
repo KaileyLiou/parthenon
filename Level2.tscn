@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://cglrbahjs5d02" path="res://pigeon.png" id="1_8mrap"]
 [ext_resource type="Texture2D" uid="uid://dard6say52yix" path="res://nightt.png" id="1_psxy2"]
 [ext_resource type="Texture2D" uid="uid://d3shq1rsutgc5" path="res://whitetile.png" id="2_q04gf"]
-[ext_resource type="Script" uid="uid://dd0tmc1lnba0" path="res://character_body_2d.gd" id="2_s8dg4"]
 [ext_resource type="Script" uid="uid://cvdn55mapivta" path="res://resetbutton.gd" id="3_6faey"]
 [ext_resource type="Script" uid="uid://gn8fgxyc63va" path="res://toEndScreen.gd" id="5_6faey"]
 [ext_resource type="Texture2D" uid="uid://csynqvl6q3tr" path="res://portal.png" id="5_wwdpc"]
+[ext_resource type="Script" uid="uid://d0jaj64r2ey5h" path="res://player.gd" id="7_6x3wt"]
 [ext_resource type="PackedScene" path="res://cookie.tscn" id="8_6x3wt"]
 [ext_resource type="PackedScene" uid="uid://dxanhbq6chxt1" path="res://cookie_ui.tscn" id="9_3453u"]
 
@@ -7305,23 +7305,23 @@ texture = ExtResource("5_wwdpc")
 position = Vector2(4, -16)
 shape = SubResource("RectangleShape2D_nc7oo")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
+[node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(129, -300)
-script = ExtResource("2_s8dg4")
+script = ExtResource("7_6x3wt")
 
-[node name="Pigeon" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Pigeon" type="Sprite2D" parent="Player"]
 position = Vector2(160, 153.00002)
 scale = Vector2(0.10283687, 0.11764705)
 texture = ExtResource("1_8mrap")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(132, 155)
 zoom = Vector2(2, 2)
 limit_bottom = 28
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(158, 153)
 shape = SubResource("RectangleShape2D_8mrap")
 
