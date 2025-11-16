@@ -1,12 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cghjbfckxb3w2"]
+[gd_scene load_steps=3 format=3 uid="uid://cghjbfckxb3w2"]
 
 [ext_resource type="Script" uid="uid://psqo1nboctec" path="res://cookie.gd" id="1_0fkkf"]
+[ext_resource type="Texture2D" uid="uid://cchysbdd3237q" path="res://cookie.png" id="2_4g1sd"]
 
 [node name="Cookie" type="Node2D"]
 script = ExtResource("1_0fkkf")
 value = null
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.032857146, 0.032857146)
+texture = ExtResource("2_4g1sd")
 
 [node name="Area2D" type="Area2D" parent="."]
 
